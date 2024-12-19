@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>$DOFH: Dicks Out for Harambe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=League+Spartan:wght@400;700&family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=League+Spartan:wght@400;700&family=Arvo:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Lilita One', sans-serif;
+            background-color: #edb513;
+            color: black;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .header img {
+            max-width: 150px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-family: 'Lilita One', sans-serif;
+            font-size: 52px;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        .hero button {
+            font-family: 'League Spartan', sans-serif;
+            padding: 25px 40px;
+            border-radius: 10px;
+            font-size: 22px;
+            border: none;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .section {
+            margin-bottom: 15px;
+        }
+
+        .section.about {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: -35px;
+            margin-bottom: 15px;
+        }
+
+        .section.about .content {
+            flex: 1;
+        }
+
+        .section.about .image {
+            flex: 1;
+            text-align: right;
+            margin-top: 50px;
+        }
+
+        .section.about .image img {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .section h3 {
+            font-family: 'Lilita One', sans-serif;
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .footer h3 {
+            font-family: 'Lilita One', sans-serif;
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .section p, .footer p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer-icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 5px;
+        }
+
+        .footer-icons a {
+            text-decoration: none;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-icons img {
+            max-width: 50px;
+        }
+
+        .footer-icons span {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 22px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero h2 {
+                font-size: 24px;
+            }
+
+            .section h3, .footer h3 {
+                font-size: 32px;
+            }
+
+            .section.about {
+                flex-direction: column;
+            }
+
+            .section.about .image img {
+                max-width: 400px;
+            }
+        }
+
+        .tokenomics-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .token-box {
+            background-color: #fbcf3d;
+            border: 4px solid black;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-family: 'Arvo', serif;
+            font-size: 1.1rem;
+        }
+
+        .token-box strong {
+            font-weight: 700;
+            font-family: 'Arvo', serif;
+        }
+
+        .token-box.contract {
+            width: 100%;
+            word-break: break-all;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+        }
+
+        .copy-icon {
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+        }
+
+        .copy-icon:hover {
+            opacity: 0.8;
+        }
+
+        .copy-feedback {
+            position: absolute;
+            background: black;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            right: 0;
+            top: -30px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .copy-feedback.show {
+            opacity: 1;
+        }
+
+        .header-title {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .header-title span {
+            display: block;
+            line-height: 1.2;
+        }
+
+        .header-title span:last-child {
+            font-weight: bold;
+        }
+
+        .disclaimer {
+            background-color: #edb513;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .disclaimer p {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.4;
+            color: #604801;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="DsOut.png" alt="D*cks Out for Harambe Logo">
+            <div class="header-title">
+                <span>D*cks Out for</span>
+                <span>HARAMBE</span>
+            </div>
+        </div>
+
+        <div class="hero">
+            <h1>Whip Out Your Piece For Harambe</h1>
+            <h2>Get your D*cks Ready for a Moon Landing – The King Returns to Solana</h2>
+            <button>Buy on Raydium</button>
+        </div>
+
+        <div class="section about">
+            <div class="content">
+                <h3>What is D*cks out for Harambe ($DOFH)?</h3>
+                <p>$DOFH takes Harambe's legacy to the next level with unmatched girth and Solana's lightning-fast trades. $1BN market cap and beyond is achievable and we aim to be the first Harambe coin to pull it off, in both senses.</p>
+            </div>
+            <div class="image">
+                <img src="ezgif.png" alt="D*cks Out for Harambe Coin">
+            </div>
+        </div>
+
+        <div class="section harambenomics">
+            <h3>Harambenomics</h3>
+            <div class="tokenomics-container">
+                <div class="token-box"><strong>Ticker:</strong> $DOFH</div>
+                <div class="token-box"><strong>Liquidity Pool:</strong> Burned 🔥</div>
+                <!-- <div class="token-box"><strong>Tax:</strong> 0</div> -->
+                <div class="token-box contract">
+                    <strong>Contract Address:</strong> 
+                    <span id="contract-address">i'lladdthislaterloremloremloremloremlorem</span>
+                    <img src="copy-regular.svg" alt="Copy" class="copy-icon" onclick="copyAddress()">
+                    <div class="copy-feedback">Copied!</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h3>Join the Troop</h3>
+            <p>Join the community. Stay up to date with the latest news, reports, developments, and dank memes.</p>
+            <div class="footer-icons">
+                <a href="https://t.me/outforharambe" target="_blank">
+                    <img src="telegram-brands-solid.svg" alt="Telegram">
+                    <span>Telegram</span>
+                </a>
+                <a href="https://x.com/Solarambe" target="_blank">
+                    <img src="x-twitter-brands-solid.svg" alt="X/Twitter">
+                    <span>X/Twitter</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="disclaimer">
+        <p>DISCLOSURE: By purchasing $DOFH, you agree that you are not purchasing a security or investment contract and you agree to hold the team harmless and not liable for any loses or taxes you may incur. Although D*cks Out for Harambe (DOFH) is a community driven DeFi Ecosystem and not a registered digital currency, always make sure that you are in compliance with local laws and regulations before you make any purchase.</p>
+    </div>
+    <script>
+        function copyAddress() {
+            const address = document.getElementById('contract-address').textContent;
+            navigator.clipboard.writeText(address).then(() => {
+                const feedback = document.querySelector('.copy-feedback');
+                feedback.classList.add('show');
+                setTimeout(() => {
+                    feedback.classList.remove('show');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
+
